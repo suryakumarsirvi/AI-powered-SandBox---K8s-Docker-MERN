@@ -1,20 +1,20 @@
 # Ignore everything
 *
 
-# Allow traversal into required directories
-!kodr-3/
-!kodr-3/v0/k8s/
-!kodr-3/v0/sandbox/
-!kodr-3/v0/sandbox/router/
-!kodr-3/v0/sandbox/server/
-!kodr-3/v0/sandbox/template/
+# Allow traversal
+!v0/
+!v0/k8s/
+!v0/sandbox/
+!v0/sandbox/router/
+!v0/sandbox/server/
+!v0/sandbox/template/
 
-# Include everything inside these folders
-!kodr-3/v0/k8s/**
-!kodr-3/v0/sandbox/router/**
-!kodr-3/v0/sandbox/server/**
-!kodr-3/v0/sandbox/template/**
+# Include all contents
+!v0/k8s/**
+!v0/sandbox/router/**
+!v0/sandbox/server/**
+!v0/sandbox/template/**
 
-# Keep docs/drawings anywhere
+# Keep markdown/drawing files
 !*.md
 !*.excalidraw
