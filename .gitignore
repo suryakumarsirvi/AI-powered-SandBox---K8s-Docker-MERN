@@ -1,4 +1,20 @@
+# Ignore everything
 *
-!main
+
+# Allow traversal into required directories
+!main/
+!main/k8s/
+!main/sandbox/
+!main/sandbox/router/
+!main/sandbox/server/
+!main/sandbox/template/
+
+# Include everything inside these folders
+!main/k8s/**
+!main/sandbox/router/**
+!main/sandbox/server/**
+!main/sandbox/template/**
+
+# Keep docs/drawings anywhere
 !*.md
 !*.excalidraw

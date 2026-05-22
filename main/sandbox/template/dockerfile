@@ -1,0 +1,38 @@
+FROM node:20-bookworm-slim
+
+# Install system dependencies required for native node-pty compilation
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    git \
+    bash \
+    procps \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+# Pre-stage workspace dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy template react project
+COPY . .
+
+# Setup and compile Sandbox Agent
+WORKDIR /workspace/agent
+COPY agent/package*.json ./
+RUN npm ci
+COPY agent/ ./
+RUN npm run build
+
+# Change permissions to run as node user
+RUN chown -R node:node /workspace
+
+USER node
+WORKDIR /workspace
+
+EXPOSE 5173
+
+# Execute sandbox agent
+CMD ["node", "agent/dist/index.js"]
