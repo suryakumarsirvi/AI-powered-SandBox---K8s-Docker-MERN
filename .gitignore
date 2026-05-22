@@ -2,19 +2,20 @@
 *
 
 # Allow traversal
-!v0/
-!v0/k8s/
-!v0/sandbox/
-!v0/sandbox/router/
-!v0/sandbox/server/
-!v0/sandbox/template/
+!kodr-3/
+!kodr-3/v0/
+!kodr-3/v0/k8s/
+!kodr-3/v0/sandbox/
+!kodr-3/v0/sandbox/router/
+!kodr-3/v0/sandbox/server/
+!kodr-3/v0/sandbox/template/
 
-# Include all contents
-!v0/k8s/**
-!v0/sandbox/router/**
-!v0/sandbox/server/**
-!v0/sandbox/template/**
+# Include all nested contents
+!kodr-3/v0/k8s/**
+!kodr-3/v0/sandbox/router/**
+!kodr-3/v0/sandbox/server/**
+!kodr-3/v0/sandbox/template/**
 
-# Keep markdown/drawing files
+# Optional files anywhere
 !*.md
 !*.excalidraw
