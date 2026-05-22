@@ -1,2 +1,4 @@
-practice/k8s/secret.yml
-kodr-3 
+*
+!main
+!*.md
+!*.excalidraw
