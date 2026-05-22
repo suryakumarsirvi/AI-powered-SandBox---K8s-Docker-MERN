@@ -2,18 +2,18 @@
 *
 
 # Allow traversal into required directories
-!main/
-!main/k8s/
-!main/sandbox/
-!main/sandbox/router/
-!main/sandbox/server/
-!main/sandbox/template/
+!kodr-3/
+!kodr-3/v0/k8s/
+!kodr-3/v0/sandbox/
+!kodr-3/v0/sandbox/router/
+!kodr-3/v0/sandbox/server/
+!kodr-3/v0/sandbox/template/
 
 # Include everything inside these folders
-!main/k8s/**
-!main/sandbox/router/**
-!main/sandbox/server/**
-!main/sandbox/template/**
+!kodr-3/v0/k8s/**
+!kodr-3/v0/sandbox/router/**
+!kodr-3/v0/sandbox/server/**
+!kodr-3/v0/sandbox/template/**
 
 # Keep docs/drawings anywhere
 !*.md
