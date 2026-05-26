@@ -40,4 +40,4 @@ export async function deleteService(sandboxId) {
         name: `sandbox-service-${sandboxId}`,
         namespace: "default"
     })
-}
+} 
